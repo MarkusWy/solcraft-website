@@ -382,7 +382,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       title: String
     }
 
-    type EmbeddedHtml implements Node & HomepageImage {
+    type EmbeddedHtml implements Node & HomepageBlock {
       text: String
     }
 
