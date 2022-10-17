@@ -305,6 +305,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
     interface EmbeddedHtml implements Node {
       id: ID!
       text: String
+      blocktype: String
     }
 
     interface AboutStatList implements Node & HomepageBlock {
