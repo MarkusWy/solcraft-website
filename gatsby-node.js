@@ -427,8 +427,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       links: [HomepageLink] @link(from: "links___NODE")
     }
 
-    type ContentfulEmbeddedHtml implements Node & HomepageBlock & HomepageCta
-      @dontInfer {
+    type ContentfulEmbeddedHtml implements Node & HomepageBlock @dontInfer {
       blocktype: String @blocktype
       text: String
     }
