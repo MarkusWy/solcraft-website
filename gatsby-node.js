@@ -296,11 +296,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage
     }
 
-    interface EmbeddedHtml implements Node & HomepageBlock {
-      id: ID!
-      text: String
-    }
-
     interface AboutStat implements Node {
       id: ID!
       value: String
@@ -352,6 +347,11 @@ exports.createSchemaCustomization = async ({ actions }) => {
     type ContentfulHomepageLink implements Node & HomepageLink @dontInfer {
       id: ID!
       href: String
+      text: String
+    }
+
+    interface EmbeddedHtml implements Node & HomepageBlock {
+      id: ID!
       text: String
     }
 
