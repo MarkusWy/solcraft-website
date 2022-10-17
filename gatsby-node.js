@@ -527,12 +527,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage @link(from: "image___NODE")
     }
 
-    type ContentfulEmbeddedHtml implements Node & EmbeddedHtml & HomepageBlock
-    @dontInfer {
-    id: ID!
-    text: String
-  }
-
     type ContentfulAboutStat implements Node & AboutStat @dontInfer {
       id: ID!
       value: String
