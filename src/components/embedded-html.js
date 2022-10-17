@@ -5,6 +5,7 @@ import { Container, Section, Text, SuperHeading } from "./ui"
 import * as styles from "./about-hero.css"
 
 export default function EmbeddedHtml(props) {
+  console.log(props);
   return (
     <Section>
       <Container>
