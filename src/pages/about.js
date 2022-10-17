@@ -9,7 +9,7 @@ export default function About(props) {
 
   return (
     <Layout {...aboutPage}>
-      {aboutPage.blocks.map((block) => {
+      {aboutPage?.blocks?.map((block) => {
         const { id, blocktype, ...componentProps } = block
         const Component = sections[blocktype] || Fallback
         return <Component key={id} {...componentProps} />
