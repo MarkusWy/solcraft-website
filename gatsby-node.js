@@ -302,6 +302,11 @@ exports.createSchemaCustomization = async ({ actions }) => {
       label: String
     }
 
+    interface EmbeddedHtml implements Node {
+      id: ID!
+      text: String
+    }
+
     interface AboutStatList implements Node & HomepageBlock {
       id: ID!
       blocktype: String
@@ -350,11 +355,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
     }
 
-    interface EmbeddedHtml implements Node & HomepageBlock {
-      id: ID!
-      text: String
-    }
-
     type ContentfulNavItem implements Node & NavItem & HeaderNavItem
       @dontInfer {
       id: ID!
@@ -380,6 +380,10 @@ exports.createSchemaCustomization = async ({ actions }) => {
       url: String @imageUrl
       file: JSON
       title: String
+    }
+
+    type EmbeddedHtml implements Node & HomepageImage {
+      text: String
     }
 
     type ContentfulHomepageHero implements Node & HomepageHero & HomepageBlock
@@ -421,6 +425,12 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
       image: HomepageImage @link(from: "image___NODE")
       links: [HomepageLink] @link(from: "links___NODE")
+    }
+
+    type ContentfulEmbeddedHtml implements Node & HomepageBlock & HomepageCta
+      @dontInfer {
+      blocktype: String @blocktype
+      text: String
     }
 
     type ContentfulHomepageLogo implements Node & HomepageLogo @dontInfer {

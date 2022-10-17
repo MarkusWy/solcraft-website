@@ -286,6 +286,7 @@ For this example, we'll create a new "Banner" component.
            ...HomepageProductListContent
            # New component fragment
            ...HomepageBannerContent
+           ...EmbeddedHtmlContent
          }
        }
      }
