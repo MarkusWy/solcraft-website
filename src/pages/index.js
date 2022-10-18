@@ -6,7 +6,7 @@ import Fallback from "../components/fallback"
 
 export default function Homepage(props) {
   const { homepage } = props.data
-
+  console.log('props:', props);
   return (
     <Layout {...homepage}>
       {homepage?.blocks?.map((block) => {
