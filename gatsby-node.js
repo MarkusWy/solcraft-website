@@ -384,6 +384,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
     }
 
     type EmbeddedHtml implements Node & HomepageBlock {
+      id: ID!
       text: String
     }
 
