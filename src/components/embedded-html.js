@@ -1,11 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container, Section, Text, SuperHeading } from "./ui"
-import * as styles from "./about-hero.css"
+import { Container, Section } from "./ui"
 
 export default function EmbeddedHtml(props) {
-  console.log(props);
   return (
     <Section>
       <Container>

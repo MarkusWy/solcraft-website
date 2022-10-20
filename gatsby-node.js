@@ -302,7 +302,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       label: String
     }
 
-    interface EmbeddedHtml implements Node {
+    interface EmbeddedHtml implements Node & HomepageBlock {
       id: ID!
       text: String
       blocktype: String
@@ -383,8 +383,9 @@ exports.createSchemaCustomization = async ({ actions }) => {
       title: String
     }
 
-    type EmbeddedHtml implements Node & HomepageBlock {
+    type ContentfulEmbeddedHtml implements Node & EmbeddedHtml & HomepageBlock @dontInfer {
       id: ID!
+      blocktype: String @blocktype
       text: String
     }
 
@@ -430,6 +431,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
     }
 
     type ContentfulEmbeddedHtml implements Node & HomepageBlock @dontInfer {
+      id: ID!
       blocktype: String @blocktype
       text: String
     }
